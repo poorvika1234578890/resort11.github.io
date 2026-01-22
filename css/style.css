@@ -4366,3 +4366,73 @@ h6 {
 .footer_nav li.has-submenu .submenu {
     display: none !important;
 }
+@media (max-width: 767px) {
+  .resort-header {
+    margin-top: 50px;
+  }
+}
+/* REMOVE MOBILE MENU DIVIDER LINES */
+@media (max-width: 991px) {
+
+  .slicknav_nav li,
+  .slicknav_nav a {
+    border-bottom: none !important;
+  }
+
+  /* your custom mobile menu */
+  .mobile-nav li,
+  .mobile-nav a {
+    border-bottom: none !important;
+  }
+
+  /* remove pseudo lines */
+  .slicknav_nav li::after,
+  .slicknav_nav a::after,
+  .mobile-nav li::after,
+  .mobile-nav a::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+/* Wrapper for CEO heading section */
+.ceo-heading {
+    max-width: 900px;
+    margin: 40px auto 25px auto;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* H1 Styling for CEO section */
+.ceo-heading h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #000;   /* Black font */
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+/* Paragraph below H1 */
+.ceo-heading p {
+    font-size: 1.15rem;
+    color: #333;     /* Soft black/gray for readability */
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    .ceo-heading h1 {
+        font-size: 2.2rem;
+    }
+    .ceo-heading p {
+        font-size: 1.05rem;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .ceo-heading h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -4842,3 +4842,96 @@ nav ul li .submenu li a:hover {
         width: 100%;
     }
 }
+/* ===== INCREASE SPACE FOR RESOURCES ===== */
+
+/* Desktop & large screens */
+.footer .col-xl-2:last-child {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .footer .col-md-6:last-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+/* ===== DESKTOP ONLY: FORCE MORE SPACE FOR RESOURCES ===== */
+@media (min-width: 1200px) {
+
+    /* Resources column (last column) */
+    .footer-flex > div:last-child {
+        flex: 0 0 34% !important;
+        max-width: 34% !important;
+    }
+
+    /* Navigation column (just before Resources) */
+    .footer-flex > div:nth-last-child(2) {
+        flex: 0 0 16% !important;
+        max-width: 16% !important;
+    }
+}
+/* ===== DESKTOP: SHOW PAGES SUBMENU ON HOVER ===== */
+@media (min-width: 992px) {
+
+    /* Hide submenu by default */
+    .footer .footer_nav li.has-submenu .submenu {
+        display: none;
+        position: absolute;
+        background: #000;
+        padding: 15px 20px;
+        margin-top: 10px;
+        min-width: 260px;
+        z-index: 999;
+    }
+
+    /* Show submenu on hover */
+    .footer .footer_nav li.has-submenu:hover .submenu {
+        display: block;
+    }
+
+    /* Ensure parent is positioned */
+    .footer .footer_nav li.has-submenu {
+        position: relative;
+    }
+
+    /* Submenu link styling */
+    .footer .submenu li {
+        margin-bottom: 12px;
+    }
+
+    .footer .submenu li a {
+        color: #bdbdbd;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .footer .submenu li a:hover {
+        color: #ff8c00;
+    }
+}
+/* REMOVE MOBILE MENU DIVIDER LINES */
+@media (max-width: 991px) {
+
+  .slicknav_nav li,
+  .slicknav_nav a {
+    border-bottom: none !important;
+  }
+
+  /* your custom mobile menu */
+  .mobile-nav li,
+  .mobile-nav a {
+    border-bottom: none !important;
+  }
+
+  /* remove pseudo lines */
+  .slicknav_nav li::after,
+  .slicknav_nav a::after,
+  .mobile-nav li::after,
+  .mobile-nav a::after {
+    content: none !important;
+    display: none !important;
+  }
+}
