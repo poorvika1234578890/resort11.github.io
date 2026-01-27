@@ -4436,3 +4436,39 @@ h6 {
         font-size: 1.8rem;
     }
 }
+/* --------------------------
+   TRUST SECTION (NEAR FOOTER)
+---------------------------*/
+.trust-section {
+    background: #f8f9fb;     /* Light grey background */
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-top: 1px solid #e3e3e3;
+}
+
+.trust-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.trust-text {
+    font-size: 15px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .trust-title {
+        font-size: 20px;
+    }
+    .trust-text {
+        font-size: 14px;
+    }
+}
