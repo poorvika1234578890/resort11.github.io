@@ -687,3 +687,16 @@
 .m-btn:hover {
     background: rgba(0,0,0,0.8);
 }
+.carousel-slide img,
+.multi-carousel-track img {
+    width: 250px;
+    object-fit: cover;
+}
+.no-underline,
+.no-underline::before,
+.no-underline::after {
+    border: none !important;
+    text-decoration: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}

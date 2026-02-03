@@ -100,7 +100,7 @@
                                         </a>
                                     </li>
                                     <li class="ml-3">
-                                        <a href="https://www.instagram.com/suggeeresort?igsh=YWw5MDJwd2RkOG56">
+                                        <a href="https://www.instagram.com/resortsinbangalore/ ">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
@@ -371,6 +371,69 @@
     </div>
 
 </div>
+<div class="multi-carousel-container">
+        <button class="m-btn m-prev">&#10094;</button>
+
+        <div class="multi-carousel">
+            <div class="multi-carousel-track">
+                <img src="img/resort/suggee-resort-archery-activity-adventure-bangalore.JPG" alt="Image 1">
+                <img src="img/resort/suggee-resort-cottage-exterior.webp" alt="Image 2">
+                <img src="img/resort/suggee-resort-bonfire-night-campfire-experience-bangalore.JPG" alt="Image 3">
+                <img src="img/resort/suggee-resort-family-photo-garden-bangalore.JPG" alt="Image 4">
+                <img src="img/resort/suggee-resort-family-outdoor-games-area-bangalore.JPG" alt="Image 5">
+                <img src="img/resort/suggee-resort-pet-zone-dog-interaction-bangalore.JPG" alt="Image 6">
+                <img src="img/resort/suggee-resort-paintball-shooting-game-bangalore.JPG" alt="Image 7">
+                <img src="img/resort/suggee-resort-parrot-interaction-bird-aviary-bangalore.JPG" alt="Image 8">
+            </div>
+        </div>
+
+        <button class="m-btn m-next">&#10095;</button>
+    </div>
+
+</div>
+ <!-- IMAGE SLIDER (Your 5-image carousel) -->
+    <div class="multi-carousel-container">
+        <button class="m-btn m-prev">&#10094;</button>
+
+        <div class="multi-carousel">
+            <div class="multi-carousel-track">
+                <img src="img/resort/suggee-resort-archery-activity-adventure-bangalore.JPG" 
+     alt="Guest enjoying archery activity at Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-cottage-exterior.webp" 
+     alt="Exterior view of cottages at Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-atv-ride-quad-bike-adventure-bangalore.JPG" 
+     alt="ATV quad bike adventure ride at Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-family-photo-garden-bangalore.JPG" 
+     alt="Family enjoying a photo session in the garden at Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-family-outdoor-games-area-bangalore.JPG" 
+     alt="Family outdoor games area at Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-pet-zone-dog-interaction-bangalore.JPG" 
+     alt="Pet zone with dog interaction at Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-high-rope-bridge-adventure-bangalore.JPG" 
+     alt="High rope bridge adventure activity at Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-parrot-interaction-bird-aviary-bangalore.JPG" 
+     alt="Parrot interaction inside bird aviary at Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-iguana-reptile-interaction-animal-zone-bangalore.JPG" 
+     alt="Iguana reptile interaction at the animal zone in Suggee Resort Bangalore">
+
+<img src="img/resort/suggee-resort-corporate-outing-group-photo-bangalore.JPG" 
+     alt="Corporate outing group photo at Suggee Resort Bangalore">
+
+            </div>
+        </div>
+
+        <button class="m-btn m-next">&#10095;</button>
+    </div>
+
+</div>
 
 <!-- FAQ SECTION -->
 <section class="faq-section">
@@ -636,7 +699,26 @@
 
         });
     </script>
+<script>
+let track = document.querySelector(".multi-carousel-track");
+let prev = document.querySelector(".m-prev");
+let next = document.querySelector(".m-next");
 
+let index = 0;
+let visible = 5;                  
+let imgWidth = 212; // width 200 + gap 12
+
+next.addEventListener("click", () => {
+    let maxIndex = track.children.length - visible;
+    if (index < maxIndex) index++;
+    track.style.transform = `translateX(${-index * imgWidth}px)`;
+});
+
+prev.addEventListener("click", () => {
+    if (index > 0) index--;
+    track.style.transform = `translateX(${-index * imgWidth}px)`;
+});
+</script>
 
 
 </body>
