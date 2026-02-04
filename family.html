@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Corporate outing resorts in Bangalore</title>
+    <title>Family-Friendly Resorts in Bangalore for Day Outing & Fun</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -57,8 +57,8 @@
                                      <li>
                                         <a href="#">Blog</a>
                                         <ul class="submenu">
-                                            <li><a href="blog.html">kids blog</a></li>
-                                            <li><a href="corporate_outing.html">Corporate team blog</a></li>
+                                            <li><a href="blog.html">Kids activities</a></li>
+                                            <li><a href="corporate_outing.html">Corporate team outing</a></li>
                                         </ul>
                                         
                                     </li>
@@ -128,55 +128,35 @@
 </header>
 
 
-    <!-- header-end -->
-
-    <!-- slider_area_start -->
-    <!-- <div class="slider_area">
+      <div class="slider_area">
     <div class="slider_active owl-carousel">
-        <!-- Slider 1 
-        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_10">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
-                            <h3>Montana Resort</h3>
-                            <p>Unlock to enjoy the view of Martine</p>
+            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slider 2
-        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_2">
+        
+        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_9">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
-                            <h1>Top 10 Resorts in Bangalore</h1>
-                            <p>Unlock to enjoy the view of Martine</p>
+                    
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- slider_area_start -->
-<div class="slider_area">
-    <div class="single_slider d-flex align-items-center justify-content-center slider_bg_2">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="slider_text text-center">
-                        <h1>Family-Friendly Resorts in Bangalore for Day Outing & Fun</h>
-                        <p>Relax, play, and spend quality time together at resorts designed for families and kids near Bangalore.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- <section class="corp-hero">
     <div class="corp-hero-content">
         <h1>Corporate Team Outing Resorts in Bangalore</h1>
@@ -445,7 +425,11 @@
 
 
                             <li class="has-submenu">
-                                <a href="blog.html">Blog</a>
+                                <a href="#">Blog</a>
+                                <ul class="submenu">
+                                    <li><a href="blog.html">Kids activities</a></li>
+                                    <li><a href="corporate_outing.html">Corporate team outing</a></li>
+                                </ul>
 
                             </li>
 
@@ -608,7 +592,29 @@ prev.addEventListener("click", () => {
 </script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const links = document.querySelectorAll(".footer_nav .has-submenu > a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            const parent = this.parentElement;
+
+            // close all others
+            document.querySelectorAll(".footer_nav .has-submenu.open").forEach(el => {
+                if (el !== parent) el.classList.remove("open");
+            });
+
+            // toggle the clicked one
+            parent.classList.toggle("open");
+        });
+    });
+
+});
+</script>
 
 
 </body>

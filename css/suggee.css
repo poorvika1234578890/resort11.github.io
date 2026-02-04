@@ -4585,7 +4585,7 @@ nav ul li .submenu li a:hover {
 }
 
 .has-submenu.active .submenu {
-    display: block;
+    display: none;
 }
 
 .submenu li {
@@ -4627,7 +4627,7 @@ nav ul li .submenu li a:hover {
 }
 
 .footer .has-submenu.active > .submenu {
-    display: block;
+    display: none;
 }
 
 /* Make Pages clickable */
@@ -5136,4 +5136,121 @@ nav ul li .submenu li a:hover {
 
 .official-btn:hover {
     background: #e56d00;
+}
+/* FOOTER DROPDOWN FIX */
+.footer_nav .submenu {
+    display: none !important;
+}
+
+.footer_nav .has-submenu.open .submenu {
+    display: block !important;
+}
+.footer_nav .has-submenu.open > .submenu {
+    display: block !important;
+}
+/* ========= FOOTER DROPDOWN FIX (FINAL) ========= */
+
+.footer_nav .submenu {
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: none !important;
+    box-shadow: none !important;
+    padding-left: 15px !important;
+    display: none !important;
+}
+
+.footer_nav .has-submenu.open .submenu {
+    display: block !important;
+}
+/* Disable hover dropdown for footer */
+.footer_nav li:hover > .submenu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: none !important;
+}
+/* ============================
+   FOOTER DROPDOWN — FINAL FIX
+============================ */
+
+/* Hide by default */
+.footer_nav .submenu {
+    display: none !important;
+    position: relative !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    margin-top: 8px;
+    padding-left: 0 !important;
+}
+
+/* Show only on click */
+.footer_nav .has-submenu.open > .submenu {
+    display: block !important;
+}
+
+/* Disable hover behavior (override header style) */
+.footer_nav li:hover > .submenu {
+    display: none !important;
+}
+
+/* Footer submenu text style */
+.footer_nav .submenu li a {
+    color: #ffffff !important;   /* visible white font */
+    font-size: 15px;
+    padding: 6px 0 !important;
+    display: block;
+    text-decoration: none;
+}
+
+/* Hover effect for footer links */
+.footer_nav .submenu li a:hover {
+    color: #ff7a00 !important;  /* nice orange hover */
+}
+/* ===============================
+   FOOTER DROPDOWN — FIX OVERLAP
+================================*/
+
+.footer_nav .has-submenu {
+    position: relative !important;
+}
+
+/* RESET ALL HEADER DROPDOWN SETTINGS */
+.footer_nav .submenu {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    width: 100% !important;     /* keep inside column */
+    max-width: 100% !important;
+    white-space: normal !important;
+}
+
+/* SHOW ON CLICK */
+.footer_nav .has-submenu.open > .submenu {
+    display: block !important;
+}
+
+/* PREVENT HEADER HOVER EFFECT */
+.footer_nav li:hover > .submenu {
+    display: none !important;
+}
+
+/* FIX TEXT STYLE */
+.footer_nav .submenu li a {
+    color: #fff !important;
+    font-size: 15px;
+    padding: 6px 0 !important;
+    display: block;
+    line-height: 1.4;
 }

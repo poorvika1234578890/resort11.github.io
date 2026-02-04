@@ -267,3 +267,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".footer_nav .has-submenu > a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            const parent = this.parentElement;
+
+            // Toggle this submenu
+            parent.classList.toggle("open");
+
+            // Close others
+            document.querySelectorAll(".footer_nav .has-submenu.open").forEach(el => {
+                if (el !== parent) el.classList.remove("open");
+            });
+        });
+    });
+});

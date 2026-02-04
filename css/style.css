@@ -763,10 +763,55 @@ h3 {
   padding: 0;
 }
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+  background-image: url(../img/resort/suggee-resort-main-entrance.jpg);
 }
 .slider_bg_2 {
-  background-image: url(../img/banner/banner2.png);
+  background-image: url(../img/resort/suggee-resort-couple-photo-spot-nature-bangalore.JPG);
+}
+.slider_bg_3{
+  background-image: url(../img/resort/suggee-resort-swimming-pool-lounge-area.jpg);
+}
+.slider_bg_4 {
+  background-image: url(../img/resort/suggee-resort-tree-garden.JPG);
+}
+.slider_bg_5{
+  background-image: url(../img/resort/suggee-resort-kids-playing-in-boat.webp);
+}
+.slider_bg_6 {
+  background-image: url(../img/resort/suggee-resort-corporate-outing-group-photo-bangalore.JPG);
+} 
+.slider_bg_8 {
+  background-image: url(../img/resort/suggee-resort-team-building-activity-corporate-outing-bangalore.JPG);
+}
+.slider_bg_9 {
+  background-image: url(../img/resort/suggee-resort-family-photo-garden-bangalore.JPG);
+} 
+.slider_bg_10 {
+  background-image: url(../img/resort/suggee-resort-family-outdoor-games-area-bangalore.JPG);
+}
+.slider_bg_11 {
+  background-image: url(../img/resort/suggee-resort-romantic-candlelight-dining.jpg);
+}
+.slider_bg_12 {
+  background-image: url(../img/resort/suggee-resort-night-setup.JPG);
+}
+.slider_bg_13 {
+  background-image: url(../img/resort/suggee-resort-pet-zone-dog-interaction-bangalore.JPG);
+}
+.slider_bg_14 {
+  background-image: url(../img/resort/suggee-resort-iguana-reptile-interaction-animal-zone-bangalore.JPG)
+}
+.slider_bg_15 {
+  background-image: url(../img/resort/suggee-resort-rock-climbing-wall-bangalore.JPG);
+}
+.slider_bg_16 {
+  background-image: url(../img/resort/suggee-resort-archery-activity-adventure-bangalore.JPG)
+}
+.slider_bg_17 {
+  background-image: url(../img/resort/suggee-resort-corporate-outing-group-photo-bangalore.JPG);
+}
+.slider_bg_18 {
+  background-image: url(../img/resort/suggee-resort-group-activity-outdoor-games-bangalore.JPG)
 }
 .slider_area .single_slider {
   height: 100vh;
@@ -838,6 +883,25 @@ h3 {
     padding-bottom: 50px;
   }
 }
+.slider_bg_2 {
+  background-image: url(../img/resort/suggee-resort-couple-photo-spot-nature-bangalore.JPG);
+  background-size: cover;
+  background-position: center;
+}
+
+/* MOBILE: COMPRESS IMAGE BY REDUCING BACKGROUND SIZE */
+@media (max-width: 768px) {
+  .slider_bg_2 {
+    background-size: 60%;  /* compress the visible size */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider_bg_2 {
+    background-size: 45%;  /* even more compression */
+  }
+}
+
 .about_area .about_info p {
   font-size: 16px;
   line-height: 28px;
@@ -4371,7 +4435,7 @@ h6 {
 }
 @media (max-width: 767px) {
   .resort-header {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 }
 /* REMOVE MOBILE MENU DIVIDER LINES */
@@ -4860,7 +4924,7 @@ h2 {
 }
 
 .clean-section {
-    margin: 50px 0;
+    margin: 10px 0;
 }
 
 .clean-section h2 {
@@ -5044,4 +5108,42 @@ h2 {
 }
 .container > h2::after {
     content: none !important;
+}
+/* ENABLE FOOTER DROPDOWN FOR DESKTOP + MOBILE */
+.footer_nav .submenu {
+    display: none !important;
+}
+
+.footer_nav .has-submenu.open .submenu {
+    display: block !important;
+}
+h2::after,
+.section_title h2::after,
+h3::after {
+    display: none !important;
+}
+.section-content ul {
+    list-style: none !important;
+    padding-left: 20px !important;
+}
+
+.section-content ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 18px;  
+    line-height: 1.6;   /* improves alignment */
+    color: #000 !important;
+}
+
+/* Perfectly centered black bullet */
+.section-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);   /* ❤️ centers the bullet */
+    font-size: 20px;
+    color: #000 !important;
+    font-weight: bold;
+    line-height: 1;
 }

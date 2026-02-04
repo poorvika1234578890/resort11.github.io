@@ -59,8 +59,8 @@
                                     <li>
                                         <a href="#">Blog</a>
                                         <ul class="submenu">
-                                            <li><a href="blog.html">kids blog</a></li>
-                                            <li><a href="corporate_outing.html">Corporate team blog</a></li>
+                                            <li><a href="blog.html">Kids activities</a></li>
+                                            <li><a href="corporate_outing.html">Corporate team outing</a></li>
                                         </ul>
                                         
                                     </li>
@@ -134,15 +134,14 @@
     <!-- header-end -->
 
     <!-- slider_area_start -->
-    <!-- <div class="slider_area">
+    <div class="slider_area">
     <div class="slider_active owl-carousel">
-        <!-- Slider 1 
         <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
-                            <h3>Montana Resort</h3>
+                            <h3>Top 10 Resorts in Bangalore</h3>
                             <p>Unlock to enjoy the view of Martine</p>
                         </div>
                     </div>
@@ -150,23 +149,23 @@
             </div>
         </div>
 
-        <!-- Slider 2
+        
         <div class="single_slider d-flex align-items-center justify-content-center slider_bg_2">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
-                            <h1>Top 10 Resorts in Bangalore</h1>
-                            <p>Unlock to enjoy the view of Martine</p>
+                            <h1>Top Resorts in Bangalore for Day Outing & Group Experiences (2026)</h1>
+                            <p>Your guide to the best resort experiences in Bangalore</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
-<!-- slider_area_start -->
-<div class="slider_area">
+</div>
+
+<!-- <div class="slider_area">
     <div class="single_slider d-flex align-items-center justify-content-center slider_bg_2">
         <div class="container">
             <div class="row">
@@ -179,7 +178,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- slider_area_end -->
 
@@ -277,12 +276,12 @@
             </div>
         </div>
     </div>
-    offers_area_end -->
+    offers_area_end
 
 
     <!-- Top Resorts Heading -->
 <div class="ceo-heading">
-    <h1>Explore verified Resorts near Bangalore</h1>
+    <h2>Explore verified Resorts near Bangalore</h2>
 
     <p>This page highlights verified resorts near Bangalore that are suitable for 
         day outings, group visits, and short getaways. The resorts listed here are 
@@ -373,10 +372,10 @@
             <div class="col-xl-7 col-lg-7">
                 <div class="about_thumb2 d-flex">
                     <div class="img_1">
-                        <img src="img/resort/Gari-resort-Swimming-Pool.jpg" class="resort-image" alt="Gari-resort-Swimming-Pool">
+                        <img src="img/resort/gari-resort-carrom.jpg" class="resort-image" alt="Gari-resort-Swimming-Pool">
                     </div>
                     <div class="img_2">
-                        <img src="img/resort/Gari-resort-fire-camp.jpg" class="resort-image" alt="Gari-resort-adventure-activity">
+                        <img src="img/resort/gari-resort-food-view.jpg" class="resort-image" alt="Gari-resort-adventure-activity">
                     </div>
                 </div>
             </div>
@@ -762,7 +761,7 @@
             <div class="col-xl-7 col-lg-7">
                 <div class="about_thumb2 d-flex">
                     <div class="img_1">
-                        <img src="img/resort/our-native village-fire-camp.webp" class="resort-image" alt="peacock-ridge-resort-accommodation-exterior">
+                        <img src="img/resort/our-native-walls.webp" class="resort-image" alt="peacock-ridge-resort-accommodation-exterior">
                     </div>
                     <div class="img_2">
                         <img src="img/resort/our-native-village-dogs.webp" class="resort-image" alt="peacock-ridge-resort-swimming-pool-night">
@@ -893,7 +892,7 @@
                         <img src="img/resort/Ramanashree-california-archery.webp" class="resort-image" alt="bluemist-retreat-open-lawn-gazebo">
                     </div>
                     <div class="img_2">
-                        <img src="img/resort/Ramanashree-california-tree.webp" class="resort-image" alt="blue-mist-retreat-bedroom-interior">
+                        <img src="img/resort/Ramanashree-california-hall.webp" class="resort-image" alt="blue-mist-retreat-bedroom-interior">
                     </div>
                 </div>
             </div>
@@ -1178,7 +1177,11 @@
 
 
                             <li class="has-submenu">
-                                <a href="blog.html">Blog</a>
+                                <a href="#">Blog</a>
+                                <ul class="submenu">
+                                    <li><a href="blog.html">Kids activities</a></li>
+                                    <li><a href="corporate_outing.html">Corporate team outing</a></li>
+                                </ul>
 
                             </li>
 
@@ -1341,6 +1344,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const links = document.querySelectorAll(".footer_nav .has-submenu > a");
+
+    links.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            const parent = this.parentElement;
+
+            // close all others
+            document.querySelectorAll(".footer_nav .has-submenu.open").forEach(el => {
+                if (el !== parent) el.classList.remove("open");
+            });
+
+            // toggle the clicked one
+            parent.classList.toggle("open");
+        });
+    });
+
+});
+</script>
+
 
 
 </body>
