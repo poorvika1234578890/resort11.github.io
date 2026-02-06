@@ -781,7 +781,7 @@ h3 {
   background-image: url(../img/resort/suggee-resort-corporate-outing-group-photo-bangalore.JPG);
 } 
 .slider_bg_8 {
-  background-image: url(../img/resort/suggee-resort-team-building-activity-corporate-outing-bangalore.JPG);
+  background-image: url(../img/resort/suggee-resort-group-activity-outdoor-games-bangalore.JPG);
 }
 .slider_bg_9 {
   background-image: url(../img/resort/suggee-resort-family-photo-garden-bangalore.JPG);
@@ -811,7 +811,67 @@ h3 {
   background-image: url(../img/resort/suggee-resort-corporate-outing-group-photo-bangalore.JPG);
 }
 .slider_bg_18 {
-  background-image: url(../img/resort/suggee-resort-group-activity-outdoor-games-bangalore.JPG)
+  background-image: url(../img/resort/Family\ ATV\ Ride\ –\ Kids\ Quad\ Bike\ Adventure\ at\ Outdoor\ Park.JPG)
+}
+.slider_bg_19 {
+  background-image: url(../img/resort/Kids\ Horse\ Riding\ Experience\ –\ Safe\ Pony\ Ride\ for\ Children.JPG)
+}
+.slider_bg_20 {
+  background-image: url(../img/resort/Kids\ Trampoline\ Jumping\ Activity\ –\ Outdoor\ Play\ Zone\ for\ Children.JPG)
+}
+.slider_bg_21 {
+  background-image: url(../img/resort/Kids\ Zipline\ Ride\ at\ Outdoor\ Adventure\ Park\ –\ Safe\ Ziplining\ for\ Children.JPG)
+}
+.slider_bg_22 {
+  background-image: url(../img/resort/suggee-resort-corporate-img\ \(1\).JPG)
+}
+.slider_bg_23 {
+  background-image: url(../img/resort/suggee-resort-corporate-img\ \(2\).JPG)
+}
+.slider_bg_24 {
+  background-image: url(../img/resort/suggee-resort-corporate-img\ \(3\).JPG)
+}
+.slider_bg_25 {
+  background-image: url(../img/resort/suggee-resort-atv-ride-quad-bike-adventure-bangalore.JPG)
+}
+.slider_bg_26 {
+  background-image: url(../img/resort/suggee-resort-sky-cycling-adventure-bangalore.JPG)
+}
+.slider_bg_27 {
+  background-image: url(../img/resort/Kids\ Zipline\ Ride\ at\ Outdoor\ Adventure\ Park\ –\ Safe\ Ziplining\ for\ Children.JPG)
+}
+.slider_bg_28 {
+  background-image: url(../img/resort/suggee-resort-rock-climbing-wall-bangalore.JPG)
+}
+.slider_bg_29 {
+  background-image: url(../img/resort/suggee-resort-rope-walking-adventure-bangalore.JPG)
+}
+.slider_bg_30 {
+  background-image: url(../img/resort/suggee-resort-horse-riding-experience-bangalore.JPG);
+}
+.slider_bg_31 {
+  background-image: url(../img/resort/suggee-resort-pet-zone-dog-interaction-bangalore.JPG)
+}
+.slider_bg_32 {
+  background-image: url(../img/resort/suggee-resort-dog.JPG)
+}
+.slider_bg_33 {
+  background-image: url(../img/resort/suggee-resort-bird.JPG);
+}
+.slider_bg_34 {
+  background-image: url(../img/resort/suggee-resort-fire-camp.webp)
+}
+.slider_bg_35 {
+  background-image: url(../img/resort/suggee-resort-fire.JPG)
+}
+.slider_bg_36 {
+  background-image: url(../img/resort/sugee-resort-night.JPG);
+}
+.slider_bg_37 {
+  background-image: url(../img/resort/suggee-resort-garden-pathway.webp)
+}
+.slider_bg_38 {
+  background-image: url(../img/resort/wedding-image.jpg);
 }
 .slider_area .single_slider {
   height: 100vh;
@@ -1173,8 +1233,8 @@ h3 {
   color: #fff;
   line-height: 56px;
   font-weight: 400;
-  margin-top: 12px;
-  margin-bottom: 28px;
+  margin-top: 5%;
+  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   .video_area .video_area_inner h3 {
@@ -4991,7 +5051,7 @@ h2 {
     width: 100%;
     max-width: 900px;
     margin: auto;
-    padding: 20px;
+    padding: 5px;
     font-family: "Poppins", sans-serif;
 }
 
@@ -5034,7 +5094,7 @@ h2 {
 }
 .kids-hero-section {
     text-align: center;
-    padding: 50px 20px;
+    padding: 10px 20px;
     max-width: 900px;
     margin: auto;
     font-family: "Poppins", sans-serif;
@@ -5146,4 +5206,219 @@ h3::after {
     color: #000 !important;
     font-weight: bold;
     line-height: 1;
+}
+/* Apply to ALL slider background images */
+[class^="slider_bg_"] {
+    background-size: cover;
+    background-position: center;
+}
+
+/* MOBILE — compress images */
+@media (max-width: 768px) {
+  [class^="slider_bg_"] {
+      background-size: contain !important; /* shows full image without cropping */
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 300px !important; /* reduce height */
+  }
+}
+
+@media (max-width: 480px) {
+  [class^="slider_bg_"] {
+      background-size: contain !important;
+      height: 220px !important; /* even smaller for small phones */
+  }
+}
+@media (max-width: 768px) {
+
+    /* Fix slider height auto-adjusting */
+    .slider_area,
+    .slider_active,
+    .single_slider {
+        height: auto !important;
+        min-height: 450px; /* adjust as needed */
+        overflow: hidden;  /* removes extra space */
+    }
+
+    /* Compress background image */
+    [class^="slider_bg_"] {
+        background-size: contain !important;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 40px 0; /* keeps your text inside safely */
+    }
+}
+/* MOBILE FIX — remove white gap completely */
+@media (max-width: 768px) {
+
+    /* FORCE slider to have no gap */
+    .slider_area,
+    .slider_active,
+    .single_slider {
+        height: 250px !important; /* fixed height = no white space */
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden;
+    }
+
+    /* compress background images */
+    [class^="slider_bg_"] {
+        background-size: cover !important; /* keeps background filled */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* adjust text */
+    .slider_text {
+        margin-top: 60px; /* bring text down */
+    }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+    .slider_area,
+    .slider_active,
+    .single_slider {
+        height: 200px !important;
+    }
+
+    .slider_text {
+        margin-top: 40px;
+    }
+}
+.about_thumb2 .img_1 img,
+.about_thumb2 .img_2 img {
+    width: 100%;
+    height: 280px;      /* make both images same height */
+    object-fit: cover;  /* crops nicely without distortion */
+    border-radius: 10px; /* optional */
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .about_thumb2 .img_1 img,
+    .about_thumb2 .img_2 img {
+        height: 180px;  /* smaller on phones */
+    }
+}
+.about_thumb2 .img_1,
+.about_thumb2 .img_2 {
+    width: 50%;                 /* make both equally wide */
+}
+
+.about_thumb2 .img_1 img,
+.about_thumb2 .img_2 img {
+    width: 100%;
+    aspect-ratio: 1 / 1;        /* makes it a perfect square */
+    object-fit: cover;          /* crops nicely */
+    border-radius: 10px;        /* optional */
+}
+
+/* Mobile: stack images but keep square shape */
+@media (max-width: 768px) {
+    .about_thumb2 {
+        flex-direction: column;
+    }
+
+    .about_thumb2 .img_1,
+    .about_thumb2 .img_2 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.kids-hero-section {
+    margin-bottom: 10px; /* reduce gap */
+    padding-bottom: 0;
+}
+
+.kids-clean-wrapper {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.kids-clean-wrapper .clean-section {
+    margin-top: 0;
+    padding-top: 10px;   /* reduce this as needed */
+}
+
+.kids-hero-section h1 {
+    margin-bottom: 5px !important; /* reduce gap under heading */
+}
+
+.kids-hero-section p {
+    margin-top: 0 !important;
+}
+.kids-clean-wrapper .clean-section p {
+    margin-bottom: 0 !important;   /* removes space under paragraph */
+    padding-bottom: 0 !important;
+}
+
+.kids-clean-wrapper .clean-section {
+    margin-bottom: 0 !important;   /* removes section-to-section gap */
+    padding-bottom: 0 !important;
+}
+/* Base container */
+.instragram_area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;                     /* No gap anywhere */
+    width: 100%;
+}
+
+/* Each item */
+.single_instagram {
+    width: 20%;                 /* 5 items side by side on desktop */
+    position: relative;
+    margin: 0;                  /* Remove gaps */
+}
+
+/* Image styling */
+.single_instagram img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Fills space without leaving gaps */
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Name overlay */
+.img-name {
+    display: block;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 6px 0;
+    font-size: 14px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Mobile view - stack one below the other */
+@media (max-width: 768px) {
+    .single_instagram {
+        width: 100%;            /* Full width */
+    }
+
+    .single_instagram img {
+        width: 100%;
+        height: 390px;           /* Prevents cropping on small screens */
+        object-fit: cover;
+    }
+}
+.instragram_area {
+  display: block;
+  overflow: hidden;
+}
+.instragram_area .single_instagram {
+  width: 20%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .instragram_area .single_instagram {
+    width: 100%;
+  }
 }
